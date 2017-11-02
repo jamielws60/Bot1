@@ -35,6 +35,8 @@ from dotenv import load_dotenv
         elif event["type"] == "presence_change":
             self.handle_presence_change(event)
 
+logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.DEBUG)
+
     def handle_message(self, event):
         text = event["text"]
         if text.lower() == "hello" or text.lower() == "hi":
